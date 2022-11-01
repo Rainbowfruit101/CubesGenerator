@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19a643edf16a4141a5240bcad3dd87e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubePrefab: {fileID: 4534674640259867030, guid: 6e53fc0d3ccb39b43b7c8e33d716c9a2, type: 3}
+  cubesPool: {fileID: 959974788}
   cubesContainer: {fileID: 842313547}
   spawnPoints:
   - {fileID: 1021228658}
@@ -1193,6 +1193,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding: {x: 0, y: 0, z: 0, w: 0}
   m_Softness: {x: 0, y: 0}
+--- !u!1 &959974787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959974789}
+  - component: {fileID: 959974788}
+  m_Layer: 0
+  m_Name: CubesPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &959974788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959974787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abb92502fec447c0b6181f69657ecc6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amountOfPreparedCubes: 10
+  cubePrefab: {fileID: 4534674640259867030, guid: 6e53fc0d3ccb39b43b7c8e33d716c9a2, type: 3}
+--- !u!4 &959974789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959974787}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,6 +2292,7 @@ MonoBehaviour:
   distanceInputField: {fileID: 160734529}
   spawnDelayInputField: {fileID: 1797623634}
   startPauseButton: {fileID: 1672198091}
+  buttonText: {fileID: 2072034220}
   errorPopup: {fileID: 580986165}
   cubeGenerator: {fileID: 869459263}
 --- !u!1 &1672198089
@@ -2903,7 +2950,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GenerateButton
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

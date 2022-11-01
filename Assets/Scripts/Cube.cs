@@ -10,14 +10,16 @@ namespace CubesGenerator
         private Coroutine _moveCoroutine;
         private CubesPool _cubesPool;
 
+        private void Awake()
+        {
+            renderer.sharedMaterial = new Material(renderer.material);
+        }
+
         public void Init(ConfigData configData)
         {
             _configData = configData;
 
-            renderer.sharedMaterial = new Material(renderer.material)
-            {
-                color = GetRandomColor()
-            };
+            renderer.sharedMaterial.color = GetRandomColor();
         }
 
         public void Move()

@@ -10,6 +10,7 @@ namespace CubesGenerator
         [SerializeField] private TMP_InputField distanceInputField;
         [SerializeField] private TMP_InputField spawnDelayInputField;
         [SerializeField] private Button startPauseButton;
+        [SerializeField] private TMP_Text buttonText;
         [SerializeField] private ErrorPopup errorPopup;
         [SerializeField] private CubeGenerator cubeGenerator;
 
@@ -25,6 +26,7 @@ namespace CubesGenerator
             if (cubeGenerator.IsEnabled)
             {
                 cubeGenerator.StopGenerate();
+                buttonText.text = "Start";
                 return;
             }
 
@@ -52,6 +54,7 @@ namespace CubesGenerator
             configData.SpawnDelay = spawnDelay;
 
             cubeGenerator.StartGenerate(configData);
+            buttonText.text = "Pause";
         }
 
         private bool Validate(string value, string errorMessage, out float result)
